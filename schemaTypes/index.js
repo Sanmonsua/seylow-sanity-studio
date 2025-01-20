@@ -113,4 +113,27 @@ const listenNowContentType = defineType({
   ],
 })
 
-export const schemaTypes = [releaseType, bannerType, profileInfoType, listenNowContentType]
+const socialType = defineType({
+  name: 'social',
+  title: 'Social',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'link',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'icon',
+      type: 'string',
+      description: 'Font Awesome icon classname https://fontawesome.com/v6',
+    }),
+  ],
+})
+
+export const schemaTypes = [releaseType, bannerType, profileInfoType, listenNowContentType, socialType]

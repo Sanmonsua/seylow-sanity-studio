@@ -16,6 +16,11 @@ const releaseType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'statusEs',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'songlink',
       type: 'string',
       validation: (rule) => rule.required(),
@@ -38,8 +43,20 @@ const bannerType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'titleEs',
+      type: 'string',
+      description: 'Spanish Title',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'subtitle',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'subtitleEs',
+      type: 'string',
+      description: 'Spanish Subtitle',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -50,6 +67,12 @@ const bannerType = defineType({
     defineField({
       name: 'callToAction',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'callToActionEs',
+      type: 'string',
+      description: 'Spanish Call to Action',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -77,6 +100,12 @@ const profileInfoType = defineType({
     defineField({
       name: 'bio',
       type: 'text',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'bioEs',
+      type: 'text',
+      description: 'Spanish Bio',
       validation: (rule) => rule.required(),
     }),
     defineField({
